@@ -37,7 +37,7 @@ export default function Home() {
       <div className="grid w-full max-w-sm items-center gap-1.5">
         <Label htmlFor="pdf-file" className="text-6xl font-bold text-red-600">Upload PDF</Label>
         <Input id="pdf-file" type="file" onChange={handlerFileChange} />
-        <Button onClick={handlerClick}>OK</Button>
+        <Button className="mt-4 text-lg" onClick={handlerClick}>Enviar</Button>
       </div>
       
     </main>
