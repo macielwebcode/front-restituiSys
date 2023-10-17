@@ -7,10 +7,10 @@ export default function TablePage () {
 
   const [data, setData] = useState<any[]>([]);
 
-  console.log(data)
+  
 
   const factoryTable = () => {
-    fetch('/api/upload')
+    fetch('http://localhost:3000/api/upload')
       .then(res => res.json())
       .then(json => setData(json));
   }
@@ -80,7 +80,7 @@ export default function TablePage () {
   }
 
 
-
+  console.log('criente', data)
 
 
   return (
@@ -103,7 +103,7 @@ export default function TablePage () {
                   <td>{item.product_name}</td>
                   <td>{item.product_category}</td>
                   <td>
-                    {/* {
+                    {
                       inEditMode.status && inEditMode.rowKey === item.id ? (
                         <input value={unitPrice}
                           onChange={(event) => setUnitPrice(event.target.value)}
@@ -111,7 +111,7 @@ export default function TablePage () {
                       ) : (
                         item.unit_price
                       )
-                    } */}
+                    }
                   </td>
                   <td>
                     {
